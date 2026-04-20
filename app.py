@@ -1257,33 +1257,6 @@ trade_catalog = load_trade_catalog()
 commodity_tensor, transport_tensor = build_trade_tensors(trade_catalog)
 coords = load_country_coords()
 
-official_trade_rows = int((trade_catalog["source"] != "Illustrative fallback").sum())
-
-st.markdown(
-    f"""
-    <div class="topbar">
-        <div class="topbar-left">
-            <div class="topbar-brand">W</div>
-            <div class="topbar-search">Search networks</div>
-            <div class="topbar-icon">N</div>
-            <div class="topbar-icon">M</div>
-            <div>
-                <div class="topbar-title">War Trade Studio</div>
-                <div class="topbar-subtitle">Geopolitical tension and global trade networks</div>
-            </div>
-        </div>
-        <div class="topbar-right">
-            <div class="topbar-icon">G</div>
-            <div class="topbar-icon">R</div>
-            <div class="topbar-chip">200 Countries</div>
-            <div class="topbar-chip">{official_trade_rows:,} Routes</div>
-            <div class="topbar-chip primary">Studio</div>
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
 with st.sidebar:
     st.markdown('<div class="sidebar-section-label">Pages</div>', unsafe_allow_html=True)
     page = st.radio(
@@ -1333,18 +1306,6 @@ if page == "Commodity Analysis":
         """,
         unsafe_allow_html=True,
     )
-
-st.markdown(
-    f"""
-    <div class="method-card">
-        <strong>Model.</strong>
-        War is an undirected adjacency matrix. Commodity flows are directed from exporter to importer.
-        Transport channels encode route availability by mode. A route is exposed when either endpoint is connected
-        to the war/tension layer. Trade routes are based on major global flows.
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
 
 if page == "Commodity Analysis":
     war_edges = war_edges_frame(war_matrix)
