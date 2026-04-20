@@ -616,7 +616,7 @@ SEED_TRADE_FLOWS = [
     TradeFlow("China", "United States", "Semiconductors", ("Air", "Sea"), "Chinese chips to US."),
     TradeFlow("China", "Japan", "Semiconductors", ("Air",), "Chinese chips to Japan."),
     TradeFlow("Israel", "United States", "Semiconductors", ("Air",), "Israeli chips to US."),
-    TradeFlow("Israel", "China", "Semiconductors", ("Sea",raeli chips to China."),
+    TradeFlow("Israel", "China", "Semiconductors", ("Sea",), "Israeli chips to China."),
 
     # Fertilizer - 30 routes
     TradeFlow("Russia", "Brazil", "Fertilizer", ("Sea",), "Fertilizer route exposed to war and sanctions."),
