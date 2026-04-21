@@ -1325,7 +1325,7 @@ if page == "Commodity Analysis":
     st.markdown('</div>', unsafe_allow_html=True)
     
     st.info(
-        "The war layer remains a curated conflict/tension matrix, and trade routes are based on major global flows."
+        "The conflict layer is based on conflict/tension matrix, and trade routes are based on major global flows."
     )
     
     tab_routes, tab_risk, tab_tensors, tab_impact = st.tabs(["Route Observations", "Exposure Summary", "Tensor Matrices", "Single Node Analysis"])
