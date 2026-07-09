@@ -464,6 +464,24 @@ SEED_TENSIONS = [
     TensionEdge("Denmark", "China", 2, "Regional influence."),
     TensionEdge("Norway", "China", 2, "Regional influence."),
     TensionEdge("Canada", "China", 3, "Huawei and trade disputes."),
+    # Added 2024-2026 Conflicts
+    TensionEdge("Sudan", "Egypt", 3, "Sudan civil war spillover and RSF backing."),
+    TensionEdge("Sudan", "Chad", 4, "Cross-border militant movement and refugee crisis."),
+    TensionEdge("Sudan", "United Arab Emirates", 4, "Accusations of RSF backing."),
+    TensionEdge("Ethiopia", "Somalia", 4, "Somaliland port deal and sovereignty dispute."),
+    TensionEdge("Niger", "France", 4, "Post-coup expulsion of military forces."),
+    TensionEdge("Mali", "France", 4, "Post-coup tensions and withdrawal."),
+    TensionEdge("Burkina Faso", "France", 4, "Post-coup tensions and withdrawal."),
+    TensionEdge("Venezuela", "Guyana", 4, "Essequibo territorial annexation threat."),
+    TensionEdge("Iran", "Israel", 5, "Direct military escalation and missile exchanges."),
+    TensionEdge("Yemen", "United States", 4, "Houthi Red Sea attacks and US strikes."),
+    TensionEdge("Yemen", "United Kingdom", 4, "Houthi Red Sea attacks and UK strikes."),
+    TensionEdge("Myanmar", "Thailand", 3, "Civil war spillover and border clashes."),
+    TensionEdge("Myanmar", "China", 3, "Border security and rebel backing."),
+    TensionEdge("Democratic Republic of the Congo", "Rwanda", 5, "M23 rebellion and direct border skirmishes."),
+    TensionEdge("Philippines", "China", 4, "Second Thomas Shoal blockades and clashes."),
+    TensionEdge("Ecuador", "Mexico", 3, "Embassy raid and diplomatic severing."),
+    TensionEdge("Haiti", "Dominican Republic", 3, "Border closure due to gang violence spillover."),
 ]
 
 SEED_TRADE_FLOWS = [
@@ -684,6 +702,42 @@ SEED_TRADE_FLOWS = [
     TradeFlow("Egypt", "Brazil", "Fertilizer", ("Sea",), "Egyptian fertilizer to Brazil."),
     TradeFlow("Tunisia", "Brazil", "Fertilizer", ("Sea",), "Tunisian fertilizer to Brazil."),
     TradeFlow("Jordan", "Brazil", "Fertilizer", ("Sea",), "Jordanian fertilizer to Brazil."),
+
+    # Semiconductors and High-Tech
+    TradeFlow("Taiwan", "United States", "Semiconductors", ("Air", "Sea"), "Advanced microchips to US tech sector."),
+    TradeFlow("Taiwan", "China", "Semiconductors", ("Air", "Sea"), "Microchips for Chinese manufacturing."),
+    TradeFlow("South Korea", "United States", "Semiconductors", ("Air", "Sea"), "Memory chips to US."),
+    TradeFlow("South Korea", "China", "Semiconductors", ("Air", "Sea"), "Memory chips to China."),
+    TradeFlow("Japan", "China", "Semiconductors", ("Air", "Sea"), "Chip manufacturing equipment and components."),
+    TradeFlow("Netherlands", "China", "Semiconductors", ("Air", "Sea"), "ASML lithography equipment (restricted)."),
+    
+    # Critical Minerals & Metals
+    TradeFlow("Democratic Republic of the Congo", "China", "Critical Minerals", ("Sea",), "Cobalt for battery manufacturing."),
+    TradeFlow("Australia", "China", "Critical Minerals", ("Sea",), "Lithium and iron ore to China."),
+    TradeFlow("Chile", "United States", "Critical Minerals", ("Sea",), "Copper and Lithium to US."),
+    TradeFlow("Chile", "China", "Critical Minerals", ("Sea",), "Copper and Lithium to China."),
+    TradeFlow("Indonesia", "China", "Critical Minerals", ("Sea",), "Nickel exports for EV batteries."),
+    TradeFlow("Argentina", "United States", "Critical Minerals", ("Sea",), "Lithium exports."),
+
+    # Agriculture (Grain, Soy, etc.)
+    TradeFlow("Ukraine", "Egypt", "Agriculture", ("Sea",), "Black Sea wheat exports."),
+    TradeFlow("Ukraine", "Turkey", "Agriculture", ("Sea",), "Black Sea grain exports."),
+    TradeFlow("Ukraine", "Spain", "Agriculture", ("Sea",), "Black Sea grain exports."),
+    TradeFlow("United States", "China", "Agriculture", ("Sea",), "Soybeans and corn to China."),
+    TradeFlow("Brazil", "China", "Agriculture", ("Sea",), "Major soybean exports to China."),
+    TradeFlow("Australia", "China", "Agriculture", ("Sea",), "Wheat and barley to China."),
+    TradeFlow("India", "United Arab Emirates", "Agriculture", ("Sea",), "Rice and food exports."),
+    TradeFlow("Canada", "Japan", "Agriculture", ("Sea",), "Wheat and canola to Japan."),
+
+    # LNG (Natural Gas) - replacing pipeline flows
+    TradeFlow("United States", "Germany", "LNG", ("Sea",), "US LNG replacing Russian gas."),
+    TradeFlow("United States", "United Kingdom", "LNG", ("Sea",), "US LNG exports to UK."),
+    TradeFlow("United States", "France", "LNG", ("Sea",), "US LNG exports to France."),
+    TradeFlow("Qatar", "Japan", "LNG", ("Sea",), "Qatari LNG to Japan."),
+    TradeFlow("Qatar", "China", "LNG", ("Sea",), "Qatari LNG to China."),
+    TradeFlow("Qatar", "South Korea", "LNG", ("Sea",), "Qatari LNG to South Korea."),
+    TradeFlow("Australia", "Japan", "LNG", ("Sea",), "Australian LNG to Japan."),
+    TradeFlow("Australia", "China", "LNG", ("Sea",), "Australian LNG to China."),
 ]
 
 MANUAL_COORDS = {
