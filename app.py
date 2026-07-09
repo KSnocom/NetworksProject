@@ -819,18 +819,20 @@ def load_country_coords() -> dict[str, tuple[float, float]]:
             timeout=8,
         )
         response.raise_for_status()
-        for item in response.json():
-            latlng = item.get("latlng") or []
-            names = item.get("name") or {}
-            if len(latlng) < 2:
-                continue
-            for name in (names.get("official"), names.get("common")):
-                if name:
-                    coords[name] = (float(latlng[0]), float(latlng[1]))
+        data = response.json()
+        if isinstance(data, list):
+            for item in data:
+                latlng = item.get("latlng") or []
+                names = item.get("name") or {}
+                if len(latlng) < 2:
+                    continue
+                for name in (names.get("official"), names.get("common")):
+                    if name:
+                        coords[name] = (float(latlng[0]), float(latlng[1]))
         for local_name, api_name in API_NAME_ALIASES.items():
             if api_name in coords:
                 coords[local_name] = coords[api_name]
-    except requests.RequestException:
+    except Exception:
         pass
     return coords
 
